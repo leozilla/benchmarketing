@@ -6,9 +6,9 @@
 	</contextListener>
 
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+		<!--<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>WARN</level>
-		</filter>
+		</filter>-->
 		<encoder>
 			<pattern>%d{HH:mm:ss.SSS} [%-5level] %logger{15} - %msg%n%rEx</pattern>
 			<immediateFlush>false</immediateFlush>
@@ -16,11 +16,11 @@
 	</appender>
 
 	<!-- Uncomment for logging ALL HTTP request and responses -->
-	<logger name="io.gatling.http" level="TRACE" />
-	<!-- Uncomment for logging ONLY FAILED HTTP request and responses -->
-	<!-- 	<logger name="io.gatling.http" level="DEBUG" /> -->
+    <!-- <logger name="io.gatling.http" level="TRACE" /> -->
+    <!-- Uncomment for logging ONLY FAILED HTTP request and responses -->
+	<!-- <logger name="io.gatling.http" level="DEBUG" /> -->
 
-	<root level="TRACE">
+	<root level="INFO">
 		<appender-ref ref="CONSOLE"/>
 		<!-- <appender-ref ref="FILE"/> -->
 	</root>

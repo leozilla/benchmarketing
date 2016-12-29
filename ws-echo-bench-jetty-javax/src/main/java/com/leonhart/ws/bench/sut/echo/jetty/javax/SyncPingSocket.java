@@ -9,6 +9,7 @@ import java.io.IOException;
 public class SyncPingSocket
 {
     private Session session;
+    private int messagesReceived;
 
     @OnOpen
     public void onWebSocketConnect(final Session sess)
@@ -19,8 +20,9 @@ public class SyncPingSocket
 
     @OnMessage
     public void onWebSocketText(String message) throws IOException {
+        messagesReceived++;
         session.getBasicRemote().sendText("pong");
-        System.out.println("Received TEXT message: " + message);
+        System.out.println("Received TEXT message #" + messagesReceived);
     }
 
     @OnClose
