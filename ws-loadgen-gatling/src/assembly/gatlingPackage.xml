@@ -1,0 +1,43 @@
+<assembly>
+
+    <id>gatling-bundle</id>
+
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <formats>
+        <format>dir</format>
+        <format>zip</format>
+    </formats>
+
+    <!-- copy all our assemblies to libs sub folder -->
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory></outputDirectory>
+            <unpack>true</unpack>
+            <includes>
+                <include>io.gatling.highcharts:gatling-charts-highcharts-bundle</include>
+            </includes>
+        </dependencySet>
+
+        <dependencySet>
+            <outputDirectory>lib</outputDirectory>
+            <useTransitiveDependencies>true</useTransitiveDependencies>
+            <useProjectArtifact>false</useProjectArtifact>
+            <excludes>
+                <exclude>io.gatling.highcharts:gatling-charts-highcharts-bundle</exclude>
+            </excludes>
+        </dependencySet>
+    </dependencySets>
+
+    <fileSets>
+        <fileSet>
+            <outputDirectory>user-files/data</outputDirectory>
+            <directory>src/test/resources/data</directory>
+        </fileSet>
+        <fileSet>
+            <outputDirectory>user-files/simulations</outputDirectory>
+            <directory>src/test/scala/</directory>
+        </fileSet>
+    </fileSets>
+
+</assembly>
