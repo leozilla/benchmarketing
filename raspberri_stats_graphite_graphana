@@ -1,1 +1,0 @@
-docker run -itd -p 2003:2003 -p 8125:8125 -p 8125:8125/udp -p 3000:3000 --name stats darkeye9/rpi2-graphite-grafana-statsd
