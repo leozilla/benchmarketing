@@ -22,7 +22,7 @@ public class PingServer
 
         // Add a websocket to a specific path spec
         ServletHolder holderEvents = new ServletHolder("ws-events", PingServlet.class);
-        context.addServlet(holderEvents, "/events/*");
+        context.addServlet(holderEvents, "/*");
 
         try
         {

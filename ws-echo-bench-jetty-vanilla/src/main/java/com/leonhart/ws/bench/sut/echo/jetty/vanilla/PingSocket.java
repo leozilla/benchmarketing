@@ -3,12 +3,17 @@ package com.leonhart.ws.bench.sut.echo.jetty.vanilla;
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.WebSocketAdapter;
 
+import java.io.IOException;
+
 public class PingSocket extends WebSocketAdapter {
+
+    private Session session;
 
     @Override
     public void onWebSocketConnect(Session sess)
     {
         super.onWebSocketConnect(sess);
+        this.session = sess;
         System.out.println("Socket Connected: " + sess);
     }
 
@@ -16,6 +21,11 @@ public class PingSocket extends WebSocketAdapter {
     public void onWebSocketText(String message)
     {
         super.onWebSocketText(message);
+        try {
+            session.getRemote().sendString("pong");
+        } catch (IOException e) {
+        }
+
         System.out.println("Received TEXT message: " + message);
     }
 
