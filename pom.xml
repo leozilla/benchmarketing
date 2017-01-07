@@ -14,6 +14,7 @@
         <module>ws-echo-bench-jetty-vanilla</module>
         <module>cache-effects-microbench</module>
         <module>concurrency</module>
-    </modules>
+    <module>concurrency-microbench</module>
+  </modules>
 
 </project>
