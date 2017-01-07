@@ -5,9 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.leonhart.benchmarketing</groupId>
-    <artifactId>cache-effects</artifactId>
+    <artifactId>concurrency</artifactId>
     <version>1.0-SNAPSHOT</version>
-
 
 
 </project>
