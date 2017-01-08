@@ -29,15 +29,29 @@
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.leonhart;
+package com.leonhart.benchmarketing.cache.microbench.lambda;
 
+import com.leonhart.benchmarketing.cache.lambda.Lambda;
 import org.openjdk.jmh.annotations.Benchmark;
+import org.openjdk.jmh.annotations.Scope;
+import org.openjdk.jmh.annotations.State;
 
+import java.util.function.Consumer;
+
+// should check if method ref produce more garbage than lambdas
+// not finished yet (and maybe bad idea to check via JMH)
+@State(Scope.Benchmark)
 public class MyBenchmark {
+    Lambda l = new Lambda();
 
     @Benchmark
-    public void testMethod() {
-        // This is a demo/sample template for building your JMH benchmarks. Edit as needed.
-        // Put your benchmark code here.
+    public Consumer<Integer> testLambda() {
+        return x -> l.set(x);
     }
+
+    @Benchmark
+    public Consumer<Integer> testMethodRef() {
+        return l::set;
+    }
+
 }

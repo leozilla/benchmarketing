@@ -1,4 +1,4 @@
-package com.leonhart.concurrency.bench.casvslock;
+package com.leonhart.benchmarketing.concurrency.casvslock;
 
 public enum State
 {

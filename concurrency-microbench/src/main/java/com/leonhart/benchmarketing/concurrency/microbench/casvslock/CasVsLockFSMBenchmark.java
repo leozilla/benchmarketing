@@ -29,10 +29,10 @@
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.leonhart.benchmarketing;
+package com.leonhart.benchmarketing.concurrency.microbench.casvslock;
 
-import com.leonhart.concurrency.bench.casvslock.GetAndUpdateFSM;
-import com.leonhart.concurrency.bench.casvslock.LockFSM;
+import com.leonhart.benchmarketing.concurrency.casvslock.GetAndUpdateFSM;
+import com.leonhart.benchmarketing.concurrency.casvslock.LockFSM;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.State;

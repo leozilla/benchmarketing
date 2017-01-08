@@ -15,7 +15,7 @@
  **
  ************************************************************************/
 
-package com.leonhart.concurrency.bench.casvslock;
+package com.leonhart.benchmarketing.concurrency.casvslock;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
