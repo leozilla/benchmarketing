@@ -39,9 +39,9 @@ import org.openjdk.jmh.annotations.State;
 import java.util.function.Consumer;
 
 // should check if method ref produce more garbage than lambdas
-// not finished yet (and maybe bad idea to check via JMH)
+// not finished yet (and likely bad idea to check via JMH)
 @State(Scope.Benchmark)
-public class MyBenchmark {
+public class LambdaBenchmark {
     Lambda l = new Lambda();
 
     @Benchmark
