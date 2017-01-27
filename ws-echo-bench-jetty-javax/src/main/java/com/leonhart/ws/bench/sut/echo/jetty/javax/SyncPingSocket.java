@@ -15,14 +15,14 @@ public class SyncPingSocket
     public void onWebSocketConnect(final Session sess)
     {
         this.session = sess;
-        System.out.println("Socket Connected: " + sess);
+        // System.out.println("Socket Connected: " + sess);
     }
 
     @OnMessage
     public void onWebSocketText(String message) throws IOException {
         messagesReceived++;
         session.getBasicRemote().sendText("pong");
-        System.out.println("Received TEXT message #" + messagesReceived);
+        // System.out.println("Received TEXT message #" + messagesReceived);
     }
 
     @OnClose

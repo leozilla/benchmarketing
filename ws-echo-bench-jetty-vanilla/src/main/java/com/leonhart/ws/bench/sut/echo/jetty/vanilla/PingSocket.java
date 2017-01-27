@@ -26,7 +26,7 @@ public class PingSocket extends WebSocketAdapter {
         } catch (IOException e) {
         }
 
-        System.out.println("Received TEXT message: " + message);
+        // System.out.println("Received TEXT message: " + message);
     }
 
     @Override
